@@ -1,7 +1,9 @@
 Introduction
 ============
 
-This framework exploits `HashiCorp Terraform <https://www.terraform.io/>`_ to perform the installation and configuration of a Pulsar Endpoint on OpenStack using a Virtual imaged named VGCN (see :doc:`requirements` for more details)
+This framework exploits `HashiCorp Terraform <https://www.terraform.io/>`_ to perform
+the installation and configuration of a Pulsar Endpoint on OpenStack
+using a Virtual imaged named VGCN (see :doc:`requirements` for more details).
 
 The Terraform script needs to access an OpenStack cloud via API to:
 
@@ -37,7 +39,9 @@ but the more the better.
 Architecture
 ------------
 
-Usegalaxy.eu and the remote Pulsar endpoints will communicate through a RabbitMQ queue; in this way, the Pulsar endpoints don't need to expose any open ports to the external.
+Usegalaxy.eu and the remote Pulsar endpoints will communicate
+through a RabbitMQ queue; in this way, the Pulsar endpoints
+don't need to expose any open ports to the external.
 
 .. figure:: _static/img/architecture2.png
    :scale: 60%

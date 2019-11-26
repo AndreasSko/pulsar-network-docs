@@ -6,7 +6,8 @@ Software needed
 
 **Ansible, Make and Unzip** are needed to follow this instruction.
 
-`Ansible <https://www.ansible.com>`_  can be easily installed following the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
+`Ansible <https://www.ansible.com>`_  can be easily installed following
+the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
 
 
 Make and Unzip can be installed on a Linux machine as described here:
@@ -24,9 +25,12 @@ On CentOS 7
 OpenStack configuration
 -----------------------
 
-Access to an OpensStack tenant is needed to perform the Pulsar endpoint installation.
+Access to an OpensStack tenant is needed to perform the
+Pulsar endpoint installation.
 
-To allow Terraform to access the Tenant download the **OpenStack RC File v2.0 (v3)** from your OpenStack dashboard and source it.
+To allow Terraform to access the Tenant download the
+**OpenStack RC File v2.0 (v3)** from your OpenStack
+dashboard and source it.
 
 .. figure:: _static/img/horizon_rc_file_download.png
    :scale: 20%
@@ -34,15 +38,19 @@ To allow Terraform to access the Tenant download the **OpenStack RC File v2.0 (v
 
 ::
 
-  $ source pulsar-network-openrc.sh 
+  $ source pulsar-network-openrc.sh
 
-Pulsar need both private and public network to properly work. Moreover, the private network needs to access to the internet.
-This is needed to allow the Pulsar Compute Nodes to mount CVMFS repositories to get access to Galaxy reference data or Containers.
+Pulsar need both private and public network to properly work.
+Moreover, the private network needs to access to the internet.
+This is needed to allow the Pulsar Compute Nodes to mount CVMFS
+repositories to get access to Galaxy reference data or Containers.
 
 VGCN image
 ----------
 
-The Pulsar network exploits a Virtual Image, named `VGCN <https://github.com/usegalaxy-eu/vgcn>`_, with everything necessary to create a Pulsar Network node.
+The Pulsar network exploits a Virtual Image, named
+`VGCN <https://github.com/usegalaxy-eu/vgcn>`_, with everything
+necessary to create a Pulsar Network node.
 
 The image contains:
 
@@ -55,14 +63,16 @@ The image contains:
 
 and must be available in your Tenant.
 
-Depending on the OpenStack configuration you will be available to upload the image by URL or not. In the first case the image
+Depending on the OpenStack configuration you will be available
+to upload the image by URL or not. In the first case the image
 can be installed straightforwardly using the :doc:`pretasks` recipes.
 
 .. figure:: _static/img/horizon_image_upload.png
    :scale: 40%
    :align: center
 
-Alternatively, the OpenStack Horizon Dashboard allows to upload an image by URL or a local image. 
+Alternatively, the OpenStack Horizon Dashboard allows to upload an
+image by URL or a local image.
 
 .. note::
 

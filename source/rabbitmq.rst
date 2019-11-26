@@ -16,7 +16,7 @@ repository to create a new RabbitMQ account for your Pulsar endpoint.
 
    - in the `rabbitmq_users` section create a new user adding the following lines:
 
-     ::
+.. code-block:: yaml
 
        rabbitmq_users:
        ...
@@ -24,9 +24,9 @@ repository to create a new RabbitMQ account for your Pulsar endpoint.
            password: "{{ <rabbit_mq_password_for_your_user> }}"
            vhost: /pulsar/<user_name>
 
-     For example the configuration for ``it02`` Pulsar endpoint is:
+For example the configuration for ``it02`` Pulsar endpoint is:
 
-     ::
+.. code-block:: yaml
 
        rabbitmq_users:
        ...
@@ -35,17 +35,17 @@ repository to create a new RabbitMQ account for your Pulsar endpoint.
            vhost: /pulsar/galaxy_it02
 
 
-   - Add your virtual host, previously configured, to the ``rabbitmq_vhosts`` section:
+- Add your virtual host, previously configured, to the ``rabbitmq_vhosts`` section:
 
-     ::
+.. code-block:: yaml
 
        rabbitmq_vhosts:
        ...
          - /pulsar/<name_name>
 
-     For example the configuration for ``it02`` virtual host is:
+For example the configuration for ``it02`` virtual host is:
 
-     ::
+.. code-block:: yaml
 
        rabbitmq_vhosts:
        ...
@@ -59,7 +59,7 @@ which needs to be added to your Pulsar configuration as described in the next st
       :scale: 40%
       :align: center
 
-   The queue URL will looks like this:
+   The queue URL will look like this:
 
    ::
 

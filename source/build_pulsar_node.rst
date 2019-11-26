@@ -1,7 +1,8 @@
 Building the Pulsar endpoint
 ============================
 
-After running the pre-tasks recipes and having properly edited the ``vars.tf`` file (see section :doc:`vars_tf`),
+After running the pre-tasks recipes and having properly edited
+the ``vars.tf`` file (see section :doc:`vars_tf`),
 we are ready to create the Pulsar endpoint.
 
 Navigate into the Pulsar infrastructure directory:
@@ -27,18 +28,19 @@ The ``apply`` command output the IP addresses of the Pulsar Central Manager
   ...
   openstack_compute_instance_v2.exec-node: Still creating... (10s elapsed)
   openstack_compute_instance_v2.exec-node: Creation complete after 17s (ID: 046f2d5e-5bf8-4e75-8015-4e6a4f96fb9d)
-  
+
   Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
-  
+
   Outputs:
-  
+
   ip_v4_internal = 172.30.135.5
   ip_v4_public = 90.147.170.170
   node_name = vgcn-it02-central-manager.pulsar
 
 Finally, all the resources have been created on OpenStack.
 
-Here, for example, the OpenStack dashboard showing a Pulsar endpoint with the Central Manager, the NFS server and two worker nodes.
+Here, for example, the OpenStack dashboard showing a Pulsar
+endpoint with the Central Manager, the NFS server and two worker nodes.
 
 .. figure:: _static/img/pulsar_endpoint_openstack.png
    :scale: 25%
@@ -50,7 +52,8 @@ In the next step we will configure Pulsar to talk to `usegalaxy.eu <https://useg
 Testing SSH access
 ----------------------------------
 
-The SSH public key configured in the ``vars.tf`` file was already automatically added to the ``authorized_keys``
+The SSH public key configured in the ``vars.tf`` file was already
+automatically added to the ``authorized_keys``
 file of the Central Manager VM. To login to this VM just type:
 
 ::

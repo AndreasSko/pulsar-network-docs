@@ -2,16 +2,19 @@ useGalaxy.eu configuration
 ==========================
 
 Your endpoint is now able to take jobs!
-The last step is to enable your endpoint on useGalaxy.eu, thus allowing the European Galaxy Server
-to send jobs to the new endpoint. Therefore a new destination and a new runner needs to be added to UseGalaxy.eu.
-As the entire configuration of the European Galaxy Server is available on GitHub, you can do this as well.
+The last step is to enable your endpoint on useGalaxy.eu, thus allowing
+the European Galaxy Server to send jobs to the new endpoint. Therefore
+a new destination and a new runner needs to be added to UseGalaxy.eu.
+As the entire configuration of the European Galaxy Server is available
+on GitHub, you can do this as well.
 
 Destination creation
 --------------------
 
-Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/destination_specifications.yaml`` and add at the end a new destination.
+Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/destination_specifications.yaml``
+and add at the end a new destination.
 
-::
+.. code-block:: yaml
 
   remote_cluster_mq_<custom-suffix>:
     limits:
@@ -45,11 +48,15 @@ Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/des
 Runner creation
 ---------------
 
-Edit the file ``infrastructure-playbook/group_vars/galaxy.yml`` and add in the ``galaxy_jobconf`` section an entry corresponding to your pulsar endpoint. Customize the ``id`` and insert the RabbitMQ URL, replacing the password with ``{{ rabbitmq_password_galaxy_<custom_suffix> }}``.
+Edit the file ``infrastructure-playbook/group_vars/galaxy.yml``
+and add in the ``galaxy_jobconf`` section an entry corresponding
+to your pulsar endpoint. Customize the ``id`` and insert the
+RabbitMQ URL, replacing the password with
+``{{ rabbitmq_password_galaxy_<custom_suffix> }}``.
 
 For example the runner added for ``it02`` Pulsar node is:
 
-::
+.. code-block:: yaml
 
   galaxy_jobconf:
   ...
@@ -69,7 +76,9 @@ For example the runner added for ``it02`` Pulsar node is:
 Pull request to useGalaxy.eu
 ----------------------------
 
-Finally, these changes must be merged to the main branch of the `infrastructure-playbook <https://github.com/usegalaxy-eu/infrastructure-playbook>`_ repository through a Pull Request.
+Finally, these changes must be merged to the main branch
+of the `infrastructure-playbook <https://github.com/usegalaxy-eu/infrastructure-playbook>`_
+repository through a Pull Request.
 
 .. warning::
 

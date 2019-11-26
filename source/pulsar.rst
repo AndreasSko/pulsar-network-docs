@@ -1,15 +1,19 @@
 Pulsar configuration
 ====================
 
-In this step we will describe how to configure the Pulsar endpoint and turn it on.
-The RabbitMQ URL, described in the step before (:doc:`rabbitmq`), is needed to proceed.
+In this step we will describe how to configure the Pulsar endpoint
+and turn it on. The RabbitMQ URL, described in the step before
+(:doc:`rabbitmq`), is needed to proceed.
 
 Prerequisites
 -------------
 
 hostname configuration
 ~~~~~~~~~~~~~~~~~~~~~~
-We need to refer to a proper `FQDN <https://en.wikipedia.org/wiki/Fully_qualified_domain_name>`_ hostname for your Pulsar server, if it doesn't has it you can easily create one into your local machine in this way:
+We need to refer to a proper
+`FQDN <https://en.wikipedia.org/wiki/Fully_qualified_domain_name>`_
+hostname for your Pulsar server, if it doesn't has it you can easily
+create one into your local machine in this way:
 
 Add the following line to your `/etc/hosts` file:
 
@@ -17,7 +21,10 @@ Add the following line to your `/etc/hosts` file:
 
   <Central-Manager-Public-IP-address> <pulsar-fqdn-hostname> <pulsar-endpoint-name>
 
-Where the ``Central-Manager-Public-IP-address`` is the public IP address of the Central Manager VM, ``<pulsar-fqdn-hostname>`` is the FQDN hostname and the ``pulsar-endpoint-name`` is the custom name of your endpoint.
+Where the ``Central-Manager-Public-IP-address`` is the public IP
+address of the Central Manager VM, ``<pulsar-fqdn-hostname>`` is
+the FQDN hostname and the ``pulsar-endpoint-name`` is the custom
+name of your endpoint.
 
 For example:
 
